@@ -10,7 +10,7 @@ public class Main {
             Mandelbrot mandelbrotSet = new Mandelbrot();
             frame.add(mandelbrotSet);
 
-            // Agregar un componente Spinner para seleccionar el número de trabajadores
+            //Sppiner para seleccionar el número de trabajadores
             SpinnerModel spinnerModel = new SpinnerNumberModel(1, 1, 8, 1); // Rango de 1 a 8 trabajadores
             JSpinner spinner = new JSpinner(spinnerModel);
             JButton startButton = new JButton("Start");
@@ -36,4 +36,3 @@ public class Main {
         });
     }
 }
-
