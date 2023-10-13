@@ -1,3 +1,5 @@
+package ConjuntoMandelbrot;
+
 import javax.swing.*;
 import java.awt.*;
 
