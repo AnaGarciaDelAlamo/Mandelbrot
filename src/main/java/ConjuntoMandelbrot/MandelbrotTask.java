@@ -1,6 +1,4 @@
 package ConjuntoMandelbrot;
-
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.concurrent.RecursiveTask;
@@ -16,7 +14,7 @@ public class MandelbrotTask extends RecursiveTask<BufferedImage> {
     private static final int ALTO = 800;
     private static final int MAX_ITER = 1000;
 
-    public  MandelbrotTask(BufferedImage image, int startX, int startY, int width, int height, int chunkSize) {
+    public MandelbrotTask(BufferedImage image, int startX, int startY, int width, int height, int chunkSize) {
         this.image = image;
         this.startX = startX;
         this.startY = startY;
@@ -71,21 +69,5 @@ public class MandelbrotTask extends RecursiveTask<BufferedImage> {
             return result;
         }
     }
-
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Mandelbrot Set");
-            Mandelbrot mandelbrot = new Mandelbrot();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setContentPane(mandelbrot);
-            frame.pack();
-            frame.setVisible(true);
-
-            JButton button = new JButton("Calculate");
-            button.addActionListener(e -> mandelbrot.pintaMandelbrot());
-            frame.add(button, BorderLayout.SOUTH);
-        });
-    }
-
 }
+
